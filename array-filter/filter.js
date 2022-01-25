@@ -7,19 +7,3 @@ function filter(array, predicate) {
   }
   return filteredArr;
 }
-
-const altEven = n => {
-  return n % 2 === 0;
-};
-
-const altoverFive = n => {
-  return n > 5;
-};
-
-const altStartsWithE = n => {
-  return n.startsWith('E');
-};
-
-const altHaveD = n => {
-  return n.toLowerCase().includes('d');
-};

@@ -12,18 +12,26 @@ const names = [
   'Donna'
 ];
 
-const evenNumbers = numbers.filter(n => {
+const evenNumbers = n => {
   return n % 2 === 0;
-});
+};
 
-const overFive = numbers.filter(n => {
+console.log('evenNumbers:', numbers.filter(evenNumbers));
+
+const overFive = n => {
   return n > 5;
-});
+};
 
-const startsWithE = names.filter(n => {
+console.log('overFive:', numbers.filter(overFive));
+
+const startsWithE = n => {
   return n.startsWith('E');
-});
+};
 
-const haveD = names.filter(n => {
+console.log('startsWithE:', names.filter(startsWithE));
+
+const haveD = n => {
   return n.toLowerCase().includes('d');
-});
+};
+
+console.log('haveD:', names.filter(haveD));

@@ -1,0 +1,36 @@
+button {
+  border: 1px solid black;
+  padding: 1rem 2rem;
+}
+
+.coldest {
+  background-color: rgb(21 0 99);
+}
+
+.cold {
+  background-color: rgb(109 40 158);
+}
+
+.warm {
+  background-color: rgb(212 53 53);
+}
+
+.hot {
+  background-color: rgb(233 161 94);
+}
+
+.hotter {
+  background-color: rgb(255 230 0);
+}
+
+.hottest {
+  background-color: rgb(255 255 255);
+}
+
+.whitetxt {
+  color: white;
+}
+
+.blacktxt {
+  color: black;
+}

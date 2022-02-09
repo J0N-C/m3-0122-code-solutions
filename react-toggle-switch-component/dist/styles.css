@@ -1,0 +1,48 @@
+* {
+  font-family: Arial, sans-serif;
+}
+
+button {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: solid black 1px;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  transition-duration: 500ms;
+}
+
+div .toggle-off,
+div .toggle-on {
+  width: 40px;
+  height: 20px;
+  border: solid black 2px;
+  border-radius: 20px;
+}
+
+div .toggle-off {
+  background-color: white;
+}
+
+div .toggle-on {
+  background-color: green;
+}
+
+.toggle-off button {
+  left: 0;
+}
+
+.toggle-on button {
+  left: 20px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+div,
+h2 {
+  margin-left: 1rem;
+}

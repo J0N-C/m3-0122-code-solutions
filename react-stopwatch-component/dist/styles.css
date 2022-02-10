@@ -1,0 +1,25 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: white;
+}
+
+.clock button {
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+  border: 2px solid black;
+  font-size: 150%;
+}

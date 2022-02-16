@@ -1,0 +1,26 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+i {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.fa-check {
+  color: rgb(0 184 0);
+}
+
+.fa-xmark,
+#err-msg p.false {
+  color: rgb(207 0 0);
+}

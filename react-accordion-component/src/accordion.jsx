@@ -1,5 +1,5 @@
 import React from 'react';
-// assume content object {id: 0, title: "html", text: "blah blach" }
+
 class Accordion extends React.Component {
   constructor(props) {
     super(props);
@@ -33,12 +33,14 @@ class Accordion extends React.Component {
     const accordionItems = this.props.content.map(item => {
       return (
         <div key={item.id} id={item.id} onClick={this.handleClick}>
-          <button>
+          <button className='accordion-title'>
             {item.title}
           </button>
-          <p className={this.checkOpened(item.id, openId)}>
-            {item.text}
-          </p>
+          <div className={this.checkOpened(item.id, openId)}>
+            <p>
+              {item.text}
+            </p>
+          </div>
         </div>
       );
     });

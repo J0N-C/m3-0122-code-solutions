@@ -17,6 +17,11 @@ const example = [
     id: 2,
     title: 'JavaScript',
     text: 'JavaScript, often abbreviated as JS, is a high-level, interpreted programming language that conforms to the ECMAScript specification. JavaScript has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.'
+  },
+  {
+    id: 3,
+    title: 'Hello World',
+    text: 'This is merely a test post.'
   }
 ];
 

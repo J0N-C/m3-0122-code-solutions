@@ -17,31 +17,20 @@ export default class App extends React.Component {
     fetch('/api/todos')
       .then(res => res.json())
       .then(todos => this.setState({ todos }));
-    /**
-     * Use fetch to send a GET request to `/api/todos`.
-     * Then 😉, once the response JSON is received and parsed,
-     * update state with the received todos.
-     */
   }
 
   addTodo(newTodo) {
-    /**
-    * Use fetch to send a POST request to `/api/todos`.
-    * Then 😉, once the response JSON is received and parsed,
-    * add the created todo to the state array.
-    *
-    * Do not mutate the original state array, nor any objects within it.
-    * https://reactjs.org/docs/optimizing-performance.html#the-power-of-not-mutating-data
-    *
-    * TIP: Be sure to SERIALIZE the todo object in the body with JSON.stringify()
-    * and specify the "Content-Type" header as "application/json"
-    *
-    * TIP: Use Array.prototype.concat to create a new array containing the contents
-    * of the old array, plus the object returned by the server.
-    */
+    const addTodo = JSON.stringify(newTodo);
+    const postHeader = [
+      ['Content-Type', 'application/json']
+    ];
+    fetch('/api/todos', { method: 'POST', headers: postHeader, body: addTodo })
+      .then(res => res.json())
+      .then(addedTodo => this.setState({ todos: this.state.todos.concat(addedTodo) }));
   }
 
   toggleCompleted(todoId) {
+
     /**
      * Find the index of the todo with the matching todoId in the state array.
      * Get its "isCompleted" status.

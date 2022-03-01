@@ -4,18 +4,9 @@ class Carousel extends React.Component {
   constructor(props) {
     super(props);
     this.state = { currentImage: 0 };
-    this.chevronClick = this.chevronClick.bind(this);
+    this.scrollLeft = this.scrollLeft.bind(this);
     this.dotClick = this.dotClick.bind(this);
     this.scrollRight = this.scrollRight.bind(this);
-  }
-
-  chevronClick(e) {
-    if (e.currentTarget.id === 'scroll-left') {
-      this.scrollLeft();
-    }
-    if (e.currentTarget.id === 'scroll-right') {
-      this.scrollRight();
-    }
   }
 
   dotClick(e) {
@@ -80,13 +71,13 @@ class Carousel extends React.Component {
     return (
     <div id='carousel-container'>
         <div id='carousel-scroll'>
-          <div id='scroll-left' onClick={this.chevronClick}>
+          <div id='scroll-left' onClick={this.scrollLeft}>
             <i className='fa-solid fa-chevron-left'></i>
           </div>
           <div className="img-container">
             {this.showImage()}
           </div>
-          <div id='scroll-right' onClick={this.chevronClick}>
+          <div id='scroll-right' onClick={this.scrollRight}>
             <i className='fa-solid fa-chevron-right'></i>
           </div>
       </div>

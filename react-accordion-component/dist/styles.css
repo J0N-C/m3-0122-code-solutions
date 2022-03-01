@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#accordion-items {
+  margin: 2rem auto;
+  width: 50%;
+}
+
+.accordion-title,
+#accordion-items p {
+  margin-top: 0.15rem;
+  width: 100%;
+  border: solid black 2px;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+#accordion-items div.open {
+  max-height: 6rem;
+  overflow: hidden;
+  transition: height;
+  transition: max-height 0.2s ease-out;
+}
+
+#accordion-items div.closed {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}

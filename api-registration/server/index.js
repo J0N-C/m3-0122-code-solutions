@@ -19,6 +19,7 @@ const jsonMiddleware = express.json();
 app.use(jsonMiddleware);
 
 app.post('/api/auth/sign-up', (req, res, next) => {
+  /* your code starts here */
   const { username, password } = req.body;
   if (!username || !password) {
     throw new ClientError(400, 'username and password are required fields');
@@ -41,9 +42,6 @@ app.post('/api/auth/sign-up', (req, res, next) => {
           next(err);
         });
     });
-
-  /* your code starts here */
-
   /**
    * Hash the user's password with `argon2.hash()`
    * Then, 😉

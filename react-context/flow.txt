@@ -1,0 +1,24 @@
+User can sign up:
+The page detects that there is no user signed in and presents the user with the
+options of signing in or signing up. If the user clicks sign up, the sign in form
+is updated to be a sign-up form instead. After the user enters their sign-up
+credentials, a POST request is sent to the server with the entered username and
+password. The server checks if username and password are valid, then hashes the
+password, then inserts a query into the database. The client page then returns
+to to the sign-in page.
+
+User can sign in:
+When the user enters their credentials and submits, a post request with the credentials
+is sent to the server.The server checks if the username and password are valid. Then
+it checks if the username exists in the database. Then it hashes the entered password
+and verifies with with the saved hash in the database. If all these pass, it returns
+the signed in username, userid, and token.
+
+User can stay signed in (even if they refresh the page).
+The token is saved in local storage. If there is a saved token, the page checks if
+the token is valid, then decodes it, changes the component state to recognizing
+that the token's user is signed in.
+
+User can sign out.
+When the user is signed out, the token is deleted from local storage, and the
+component state is reset to show no user signed in.
